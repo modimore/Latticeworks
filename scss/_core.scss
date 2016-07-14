@@ -1,0 +1,76 @@
+@import  "_util";
+
+/* Property resets */
+// Initialization mixin for LatticeWork
+// Include when using LatticeWork classes
+@mixin latticeworks-init {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Latticework segment styles */
+// Common segment styling
+%lw-seg-common {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  padding: 5px;
+}
+
+// Generates $n segment classes with increasing percentage widths
+@mixin lw-segments($n) {
+  @for $i from 1 to $n+1 {
+    .lw-seg-#{$n}-#{$i} {
+      @extend %lw-seg-common;
+      width: $i / $n * 100%;
+    }
+  }
+}
+
+/* Latticework lattice styles */
+// Common lattice styling
+%lattice-common {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 1px;
+  @extend %clearfix;
+}
+
+// Common bar styling
+%lw-bar-common {
+  margin-left: 0px;
+  margin-right: 0px;
+  @extend %clearfix;
+}
+
+@mixin lw-bar($size) {
+  .lw-bar-#{$size} {
+    @extend %lw-bar-common;
+  }
+}
+
+@mixin lattice($size) {
+  .lattice-#{$size} {
+    @extend %lattice-common;
+  }
+
+  .lw-bar-#{$size} {
+    @extend %lw-bar-common;
+  }
+}
+
+@mixin lattice-static($size, $lattice-width) {
+  .lattice-static-#{$size} {
+    @extend %lattice-common;
+    width: $lattice-width;
+  }
+}
+
+@mixin lattice-static-cutoff($size, $screen-width-max, $lattice-width) {
+  @media screen and (max-width: $screen-width-max) {
+    .lattice-static-#{$size} {
+      width: $lattice-width;
+    }
+  }
+}

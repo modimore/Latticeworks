@@ -1,0 +1,39 @@
+/* lattice-12.scss contents
+@import "_core";
+
+body {
+  margin: 0;
+}
+
+@include latticeworks-init;
+@include lw-segments(12);
+
+@include lw-bar(12);
+
+@include lattice(12);
+
+@include lattice-static(12, 1200px);
+@include lattice-static-cutoff(12, 1250px, 960px);
+@include lattice-static-cutoff(12, 1000px, 720px);
+@include lattice-static-cutoff(12, 750px, 600px);
+@include lattice-static-cutoff(12, 630px, 90%);
+*/
+
+@import "_core";
+
+body {
+  margin: 0;
+}
+
+@include latticeworks-init;
+@include lw-segments(12);
+
+@include lw-bar(12);
+
+@include lattice(12);
+
+@include lattice-static(12, 1200px);
+@include lattice-static-cutoff(12, 1250px, 960px);
+@include lattice-static-cutoff(12, 1000px, 720px);
+@include lattice-static-cutoff(12, 750px, 600px);
+@include lattice-static-cutoff(12, 630px, 90%);
