@@ -7,6 +7,8 @@ body {
 
 @include latticeworks-init;
 @include lw-segments(12);
+@include lw-segments-adjust(12, 750px, 6);
+@include lw-segments-adjust-all(12, 630px);
 
 @include lw-bar(12);
 
@@ -27,6 +29,8 @@ body {
 
 @include latticeworks-init;
 @include lw-segments(12);
+@include lw-segments-adjust(12, 750px, 6);
+@include lw-segments-adjust-all(12, 630px);
 
 @include lw-bar(12);
 
