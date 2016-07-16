@@ -21,7 +21,7 @@ body {
 @include lattice-static-cutoff(12, 630px, 90%);
 */
 
-@import "_core";
+@import "latticeworks/_core";
 
 body {
   margin: 0;

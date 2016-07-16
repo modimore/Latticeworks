@@ -1,128 +1,56 @@
-/* lattice-12.scss contents
-@import "_core";
+/*
+Error: File to import not found or unreadable: latticeworks/_core.
+        on line 24 of lattice-12.scss
 
-body {
-  margin: 0;
-}
+19: @include lattice-static-cutoff(12, 1000px, 720px);
+20: @include lattice-static-cutoff(12, 750px, 600px);
+21: @include lattice-static-cutoff(12, 630px, 90%);
+22: *\/
+23: 
+24: @import "latticeworks/_core";
+25: 
+26: body {
+27:   margin: 0;
+28: }
+29: 
 
-@include latticeworks-init;
-@include lw-segments(12);
-@include lw-segments-adjust(12, 750px, 6);
-@include lw-segments-adjust-all(12, 630px);
-
-@include lw-bar(12);
-
-@include lattice(12);
-
-@include lattice-static(12, 1200px);
-@include lattice-static-cutoff(12, 1250px, 960px);
-@include lattice-static-cutoff(12, 1000px, 720px);
-@include lattice-static-cutoff(12, 750px, 600px);
-@include lattice-static-cutoff(12, 630px, 90%);
+Backtrace:
+lattice-12.scss:24
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/home/modimore/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.19/bin/scss:13:in `<top (required)>'
+/home/modimore/.rbenv/versions/2.2.3/bin/scss:23:in `load'
+/home/modimore/.rbenv/versions/2.2.3/bin/scss:23:in `<main>'
 */
-/* clearfix */
-.lw-bar-12:before, .lattice-12:before, .lattice-static-12:before, .lw-bar-12:after, .lattice-12:after, .lattice-static-12:after {
-  display: table;
-  content: " "; }
-.lw-bar-12, .lattice-12, .lattice-static-12, .lw-bar-12:after, .lattice-12:after, .lattice-static-12:after {
-  clear: both; }
-
-/* Property resets */
-/* Latticework segment styles */
-.lw-seg-12-1, .lw-seg-12-2, .lw-seg-12-3, .lw-seg-12-4, .lw-seg-12-5, .lw-seg-12-6, .lw-seg-12-7, .lw-seg-12-8, .lw-seg-12-9, .lw-seg-12-10, .lw-seg-12-11, .lw-seg-12-12 {
-  position: relative;
-  min-height: 1px;
-  float: left;
-  padding: 5px; }
-
-/* Latticework bar styles */
-.lw-bar-12 {
-  margin-left: 0px;
-  margin-right: 0px; }
-
-/* Latticework lattice styles */
-.lattice-12, .lattice-static-12 {
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 1px; }
-
-body {
-  margin: 0; }
-
-* {
-  box-sizing: border-box; }
-
-.lw-seg-12-1 {
-  width: 8.33333%; }
-
-.lw-seg-12-2 {
-  width: 16.66667%; }
-
-.lw-seg-12-3 {
-  width: 25%; }
-
-.lw-seg-12-4 {
-  width: 33.33333%; }
-
-.lw-seg-12-5 {
-  width: 41.66667%; }
-
-.lw-seg-12-6 {
-  width: 50%; }
-
-.lw-seg-12-7 {
-  width: 58.33333%; }
-
-.lw-seg-12-8 {
-  width: 66.66667%; }
-
-.lw-seg-12-9 {
-  width: 75%; }
-
-.lw-seg-12-10 {
-  width: 83.33333%; }
-
-.lw-seg-12-11 {
-  width: 91.66667%; }
-
-.lw-seg-12-12 {
-  width: 100%; }
-
-@media screen and (max-width: 750px) {
-  .lw-seg-12-1 {
-    width: 16.66667%; }
-
-  .lw-seg-12-2 {
-    width: 33.33333%; }
-
-  .lw-seg-12-3 {
-    width: 50%; }
-
-  .lw-seg-12-4 {
-    width: 66.66667%; }
-
-  .lw-seg-12-5 {
-    width: 83.33333%; }
-
-  .lw-seg-12-6, .lw-seg-12-7, .lw-seg-12-8, .lw-seg-12-9, .lw-seg-12-10, .lw-seg-12-11, .lw-seg-12-12 {
-    width: 100%; } }
-@media screen and (max-width: 630px) {
-  .lw-seg-12-1, .lw-seg-12-2, .lw-seg-12-3, .lw-seg-12-4, .lw-seg-12-5, .lw-seg-12-6, .lw-seg-12-7, .lw-seg-12-8, .lw-seg-12-9, .lw-seg-12-10, .lw-seg-12-11, .lw-seg-12-12 {
-    width: 100%; } }
-.lattice-static-12 {
-  width: 1200px; }
-
-@media screen and (max-width: 1250px) {
-  .lattice-static-12 {
-    width: 960px; } }
-@media screen and (max-width: 1000px) {
-  .lattice-static-12 {
-    width: 720px; } }
-@media screen and (max-width: 750px) {
-  .lattice-static-12 {
-    width: 600px; } }
-@media screen and (max-width: 630px) {
-  .lattice-static-12 {
-    width: 90%; } }
-
-/*# sourceMappingURL=lattice-12.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: latticeworks/_core.\A         on line 24 of lattice-12.scss\A \A 19: @include lattice-static-cutoff(12, 1000px, 720px);\A 20: @include lattice-static-cutoff(12, 750px, 600px);\A 21: @include lattice-static-cutoff(12, 630px, 90%);\A 22: */\A 23: \A 24: @import \"latticeworks/_core\";\A 25: \A 26: body {\A 27:   margin: 0;\A 28: }\A 29: "; }
