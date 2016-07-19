@@ -15,7 +15,6 @@
   position: relative;
   min-height: 1px;
   float: left;
-  padding: 5px;
 }
 
 // Generates $n segment classes with increasing percentage widths
@@ -53,6 +52,18 @@
 
     @for $i from 1 through $n {
       .lw-seg-#{$n}-#{$i} { @extend %lw-full-width-all; }
+    }
+  }
+}
+
+@mixin lw-segments-pad($n, $padding) {
+  %lw-seg-padded {
+    padding: $padding;
+  }
+
+  @for $i from 1 through $n {
+    .lw-seg-#{$n}-#{$i} {
+      @extend %lw-seg-padded;
     }
   }
 }
