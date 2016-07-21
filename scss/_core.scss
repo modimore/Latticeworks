@@ -68,24 +68,11 @@
   }
 }
 
-@mixin lw-segments-tablefix($n) {
-  %lw-seg-tablefix {
-    position: static;
-    float: none;
-  }
-
-  table {
-    @for $i from 1 through $n {
-      .lw-seg-#{$n}-#{$i} {
-        @extend %lw-seg-tablefix;
-      }
-    }
-  }
-}
-
 /* Latticework bar styles */
 // Common bar styling
 %lw-bar-common {
+  position: relative;
+  width: 100%;
   margin-left: 0px;
   margin-right: 0px;
   @extend %clearfix;
