@@ -21,23 +21,28 @@ body {
 @include lattice-static-cutoff(12, 630px, 90%);
 */
 
-@import "latticeworks/_core";
+@import "_core", "_forms", "_tables";
 
 body {
   margin: 0;
 }
 
 @include latticeworks-init;
+
 @include lw-segments(12);
-@include lw-segments-adjust(12, 750px, 6);
-@include lw-segments-adjust-all(12, 630px);
+@include lw-segments-adjust-at(12, 750px, 6);
+@include lw-segments-adjust-at(12, 630px, 1);
 
-@include lw-bar(12);
+@include lw-group;
 
-@include lattice(12);
+@include lw-box(12);
 
-@include lattice-static(12, 1200px);
-@include lattice-static-cutoff(12, 1250px, 960px);
-@include lattice-static-cutoff(12, 1000px, 720px);
-@include lattice-static-cutoff(12, 750px, 600px);
-@include lattice-static-cutoff(12, 630px, 90%);
+@include lw-box-static(12, 1200px);
+@include lw-box-static-cutoff(12, 1250px, 960px);
+@include lw-box-static-cutoff(12, 1000px, 720px);
+@include lw-box-static-cutoff(12, 750px, 600px);
+@include lw-box-static-cutoff(12, 630px, 90%);
+
+@include lw-form(12);
+
+@include lw-tablefix(12);
