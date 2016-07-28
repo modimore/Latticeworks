@@ -10,6 +10,6 @@
   }
 }
 
-// full-width utility
-// intended to explicitly group certain selectors
-%full-width { width: 100%; }
+.lw-float-right {
+  float: right;
+}

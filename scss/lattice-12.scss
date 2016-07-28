@@ -6,9 +6,9 @@ body {
 }
 
 @include latticeworks-init;
-@include lw-segments(12);
-@include lw-segments-adjust(12, 750px, 6);
-@include lw-segments-adjust-all(12, 630px);
+@include lw-cells(12);
+@include lw-cells-adjust(12, 750px, 6);
+@include lw-cells-adjust-all(12, 630px);
 
 @include lw-bar(12);
 
@@ -29,9 +29,9 @@ body {
 
 @include latticeworks-init;
 
-@include lw-segments(12);
-@include lw-segments-adjust-at(12, 750px, 6);
-@include lw-segments-adjust-at(12, 630px, 1);
+@include lw-cells(12);
+@include lw-cells-adjust-at(12, 750px, 6);
+@include lw-cells-adjust-at(12, 630px, 1);
 
 @include lw-group;
 
@@ -46,3 +46,7 @@ body {
 @include lw-form(12);
 
 @include lw-tablefix(12);
+
+.clearfix {
+  @extend %clearfix;
+}
