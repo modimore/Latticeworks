@@ -49,7 +49,8 @@ body {
   width: auto;
 }
 
-@include lw-form(12);
+@include lw-form;
+@include lw-fields(12);
 
 @include lw-tablefix(12);
 
