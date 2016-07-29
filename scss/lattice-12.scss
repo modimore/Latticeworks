@@ -1,5 +1,6 @@
 /* lattice-12.scss contents
 @import "_core";
+@import "_util";
 
 body {
   margin: 0;
@@ -21,7 +22,7 @@ body {
 @include lattice-static-cutoff(12, 630px, 90%);
 */
 
-@import "_core", "_forms", "_tables";
+@import "core", "forms", "tables";
 
 body {
   margin: 0;
@@ -35,13 +36,18 @@ body {
 
 @include lw-group;
 
-@include lw-box(12);
+@include lw-box {
+  width: 1200px;
+  @include lw-resize-at(1250px, 960px);
+  @include lw-resize-at(1000px, 720px);
+  @include lw-resize-at(750px, 600px);
+  @include lw-resize-at(630px, 90%);
+}
 
-@include lw-box-static(12, 1200px);
-@include lw-box-static-cutoff(12, 1250px, 960px);
-@include lw-box-static-cutoff(12, 1000px, 720px);
-@include lw-box-static-cutoff(12, 750px, 600px);
-@include lw-box-static-cutoff(12, 630px, 90%);
+.lw-box-fluid {
+  @extend %lw-box;
+  width: auto;
+}
 
 @include lw-form(12);
 

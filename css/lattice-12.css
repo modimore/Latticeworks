@@ -1,5 +1,6 @@
 /* lattice-12.scss contents
 @import "_core";
+@import "_util";
 
 body {
   margin: 0;
@@ -21,38 +22,62 @@ body {
 @include lattice-static-cutoff(12, 630px, 90%);
 */
 /* clearfix */
-.lw-box-12:before, .lw-box-static-12:before, .lw-group:before, .lw-form-12:before, .clearfix:before, .lw-box-12:after, .lw-box-static-12:after, .lw-group:after, .lw-form-12:after, .clearfix:after {
+.lw-group:before, .lw-box:before, .lw-box-fluid:before, .lw-form:before, .clearfix:before, .lw-group:after, .lw-box:after, .lw-box-fluid:after, .lw-form:after, .clearfix:after {
   display: table;
   content: " "; }
-.lw-box-12, .lw-box-static-12, .lw-group, .lw-form-12, .clearfix, .lw-box-12:after, .lw-box-static-12:after, .lw-group:after, .lw-form-12:after, .clearfix:after {
+.lw-group, .lw-box, .lw-box-fluid, .lw-form, .clearfix, .lw-group:after, .lw-box:after, .lw-box-fluid:after, .lw-form:after, .clearfix:after {
   clear: both; }
 
 .lw-float-right {
   float: right; }
 
-/* Property resets */
-/* Latticework cell styles */
 .lw-cell-12-1, .lw-cell-12-2, .lw-cell-12-3, .lw-cell-12-4, .lw-cell-12-5, .lw-cell-12-6, .lw-cell-12-7, .lw-cell-12-8, .lw-cell-12-9, .lw-cell-12-10, .lw-cell-12-11, .lw-cell-12-12 {
   position: relative;
   min-height: 1px;
   float: left; }
 
 /* Latticework group styles */
-/* Latticework lattice styles */
-.lw-box-12, .lw-box-static-12 {
+.lw-group {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.lw-box, .lw-box-fluid {
   margin-left: auto;
   margin-right: auto;
   min-height: 1px; }
 
 /* clearfix */
-.lw-box-12:before, .lw-box-static-12:before, .lw-group:before, .lw-form-12:before, .clearfix:before, .lw-box-12:after, .lw-box-static-12:after, .lw-group:after, .lw-form-12:after, .clearfix:after {
+.lw-group:before, .lw-box:before, .lw-box-fluid:before, .lw-form:before, .clearfix:before, .lw-group:after, .lw-box:after, .lw-box-fluid:after, .lw-form:after, .clearfix:after {
   display: table;
   content: " "; }
-.lw-box-12, .lw-box-static-12, .lw-group, .lw-form-12, .clearfix, .lw-box-12:after, .lw-box-static-12:after, .lw-group:after, .lw-form-12:after, .clearfix:after {
+.lw-group, .lw-box, .lw-box-fluid, .lw-form, .clearfix, .lw-group:after, .lw-box:after, .lw-box-fluid:after, .lw-form:after, .clearfix:after {
   clear: both; }
 
 .lw-float-right {
   float: right; }
+
+.lw-field-12-1, .lw-field-12-2, .lw-field-12-3, .lw-field-12-4, .lw-field-12-5, .lw-field-12-6, .lw-field-12-7, .lw-field-12-8, .lw-field-12-9, .lw-field-12-10, .lw-field-12-11, .lw-field-12-12 {
+  float: left; }
+  .lw-field-12-1 > input, .lw-field-12-2 > input, .lw-field-12-3 > input, .lw-field-12-4 > input, .lw-field-12-5 > input, .lw-field-12-6 > input, .lw-field-12-7 > input, .lw-field-12-8 > input, .lw-field-12-9 > input, .lw-field-12-10 > input, .lw-field-12-11 > input, .lw-field-12-12 > input,
+  .lw-field-12-1 > textarea,
+  .lw-field-12-2 > textarea,
+  .lw-field-12-3 > textarea,
+  .lw-field-12-4 > textarea,
+  .lw-field-12-5 > textarea,
+  .lw-field-12-6 > textarea,
+  .lw-field-12-7 > textarea,
+  .lw-field-12-8 > textarea,
+  .lw-field-12-9 > textarea,
+  .lw-field-12-10 > textarea,
+  .lw-field-12-11 > textarea,
+  .lw-field-12-12 > textarea {
+    display: block;
+    width: 100%; }
+
+col.lw-cell-12-1, th.lw-cell-12-1, td.lw-cell-12-1, col.lw-cell-12-2, th.lw-cell-12-2, td.lw-cell-12-2, col.lw-cell-12-3, th.lw-cell-12-3, td.lw-cell-12-3, col.lw-cell-12-4, th.lw-cell-12-4, td.lw-cell-12-4, col.lw-cell-12-5, th.lw-cell-12-5, td.lw-cell-12-5, col.lw-cell-12-6, th.lw-cell-12-6, td.lw-cell-12-6, col.lw-cell-12-7, th.lw-cell-12-7, td.lw-cell-12-7, col.lw-cell-12-8, th.lw-cell-12-8, td.lw-cell-12-8, col.lw-cell-12-9, th.lw-cell-12-9, td.lw-cell-12-9, col.lw-cell-12-10, th.lw-cell-12-10, td.lw-cell-12-10, col.lw-cell-12-11, th.lw-cell-12-11, td.lw-cell-12-11, col.lw-cell-12-12, th.lw-cell-12-12, td.lw-cell-12-12 {
+  position: static;
+  float: none; }
 
 body {
   margin: 0; }
@@ -117,44 +142,23 @@ body {
 @media screen and (max-width: 630px) {
   .lw-cell-12-1, .lw-cell-12-2, .lw-cell-12-3, .lw-cell-12-4, .lw-cell-12-5, .lw-cell-12-6, .lw-cell-12-7, .lw-cell-12-8, .lw-cell-12-9, .lw-cell-12-10, .lw-cell-12-11, .lw-cell-12-12 {
     width: 100%; } }
-.lw-group {
-  position: relative;
-  width: 100%;
-  margin-left: 0px;
-  margin-right: 0px; }
-
-.lw-box-static-12 {
+.lw-box {
   width: 1200px; }
+  @media screen and (max-width: 1250px) {
+    .lw-box {
+      width: 960px; } }
+  @media screen and (max-width: 1000px) {
+    .lw-box {
+      width: 720px; } }
+  @media screen and (max-width: 750px) {
+    .lw-box {
+      width: 600px; } }
+  @media screen and (max-width: 630px) {
+    .lw-box {
+      width: 90%; } }
 
-@media screen and (max-width: 1250px) {
-  .lw-box-static-12 {
-    width: 960px; } }
-@media screen and (max-width: 1000px) {
-  .lw-box-static-12 {
-    width: 720px; } }
-@media screen and (max-width: 750px) {
-  .lw-box-static-12 {
-    width: 600px; } }
-@media screen and (max-width: 630px) {
-  .lw-box-static-12 {
-    width: 90%; } }
-.lw-field-12-1, .lw-field-12-2, .lw-field-12-3, .lw-field-12-4, .lw-field-12-5, .lw-field-12-6, .lw-field-12-7, .lw-field-12-8, .lw-field-12-9, .lw-field-12-10, .lw-field-12-11, .lw-field-12-12 {
-  float: left; }
-  .lw-field-12-1 > input, .lw-field-12-2 > input, .lw-field-12-3 > input, .lw-field-12-4 > input, .lw-field-12-5 > input, .lw-field-12-6 > input, .lw-field-12-7 > input, .lw-field-12-8 > input, .lw-field-12-9 > input, .lw-field-12-10 > input, .lw-field-12-11 > input, .lw-field-12-12 > input,
-  .lw-field-12-1 > textarea,
-  .lw-field-12-2 > textarea,
-  .lw-field-12-3 > textarea,
-  .lw-field-12-4 > textarea,
-  .lw-field-12-5 > textarea,
-  .lw-field-12-6 > textarea,
-  .lw-field-12-7 > textarea,
-  .lw-field-12-8 > textarea,
-  .lw-field-12-9 > textarea,
-  .lw-field-12-10 > textarea,
-  .lw-field-12-11 > textarea,
-  .lw-field-12-12 > textarea {
-    display: block;
-    width: 100%; }
+.lw-box-fluid {
+  width: auto; }
 
 .lw-field-12-1 {
   width: 8.33333%; }
@@ -191,9 +195,5 @@ body {
 
 .lw-field-12-12 {
   width: 100%; }
-
-col.lw-cell-12-1, th.lw-cell-12-1, td.lw-cell-12-1, col.lw-cell-12-2, th.lw-cell-12-2, td.lw-cell-12-2, col.lw-cell-12-3, th.lw-cell-12-3, td.lw-cell-12-3, col.lw-cell-12-4, th.lw-cell-12-4, td.lw-cell-12-4, col.lw-cell-12-5, th.lw-cell-12-5, td.lw-cell-12-5, col.lw-cell-12-6, th.lw-cell-12-6, td.lw-cell-12-6, col.lw-cell-12-7, th.lw-cell-12-7, td.lw-cell-12-7, col.lw-cell-12-8, th.lw-cell-12-8, td.lw-cell-12-8, col.lw-cell-12-9, th.lw-cell-12-9, td.lw-cell-12-9, col.lw-cell-12-10, th.lw-cell-12-10, td.lw-cell-12-10, col.lw-cell-12-11, th.lw-cell-12-11, td.lw-cell-12-11, col.lw-cell-12-12, th.lw-cell-12-12, td.lw-cell-12-12 {
-  position: static;
-  float: none; }
 
 /*# sourceMappingURL=lattice-12.css.map */

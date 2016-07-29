@@ -1,6 +1,5 @@
 @import  "_util";
 
-/* Property resets */
 // Initialization mixin for LatticeWork
 // Include when using LatticeWork classes
 @mixin latticeworks-init {
@@ -9,7 +8,7 @@
   }
 }
 
-/* Latticework cell styles */
+// Latticework cell styles
 // Common cell styling
 %lw-cell-common {
   position: relative;
@@ -27,9 +26,20 @@
   }
 }
 
+// Cell padding utility
+@mixin lw-cells-pad($n, $padding) {
+  $padded-classes: ();
+
+  @for $i from 1 through $n {
+    $padded-classes: append($padded-classes, unquote('lw-cell-#{$n}-#{$i}'), 'comma')
+  }
+
+  #{$padded-classes} {
+    padding: $padding;
+  }
+}
+
 // Adjust cell widths under screen width breakpoint
-// When @including, make sure to use unique $n and $cutoff combinations
-// Failing to do so will cause an error
 @mixin lw-cells-adjust-at($n, $screen-width-max, $cutoff) {
   @media screen and (max-width: $screen-width-max) {
     @if $cutoff != 1 {
@@ -51,46 +61,32 @@
 }
 
 /* Latticework group styles */
+%lw-group {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  @extend %clearfix;
+}
 
 @mixin lw-group {
   .lw-group {
-    position: relative;
-    width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    @extend %clearfix;
+    @extend %lw-group;
+    @content;
   }
 }
 
-/* Latticework lattice styles */
-// Common lattice styling
-%lw-box-common {
+// Latticework box styles
+// Basic Box
+%lw-box {
   margin-left: auto;
   margin-right: auto;
   min-height: 1px;
   @extend %clearfix;
 }
 
-// Full-width box
-@mixin lw-box($size) {
-  .lw-box-#{$size} {
-    @extend %lw-box-common;
-  }
-}
-
-// Fixed-width box
-@mixin lw-box-static($size, $lw-box-width) {
-  .lw-box-static-#{$size} {
-    @extend %lw-box-common;
-    width: $lw-box-width;
-  }
-}
-
-// Adjust box width under screen width breakpoint
-@mixin lw-box-static-cutoff($size, $screen-width-max, $lw-box-width) {
-  @media screen and (max-width: $screen-width-max) {
-    .lw-box-static-#{$size} {
-      width: $lw-box-width;
-    }
+@mixin lw-box {
+  .lw-box {
+    @extend %lw-box;
+    @content;
   }
 }

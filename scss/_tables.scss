@@ -1,9 +1,9 @@
-@mixin lw-tablefix($n) {
-  %lw-cell-tablefix {
-    position: static;
-    float: none;
-  }
+%lw-cell-tablefix {
+  position: static;
+  float: none;
+}
 
+@mixin lw-tablefix($n) {
   col, th, td {
     @for $i from 1 through $n {
       &.lw-cell-#{$n}-#{$i} {

@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-[class*=lw-box-] {
+.lw-box {
   background-color: blue;
   border: 5px solid darkblue;
 
   margin: 10px auto;
 }
 
-[class*=lw-group-]{
+.lw-group {
   background-color: red;
   border: 5px solid darkred;
 }

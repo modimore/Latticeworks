@@ -13,3 +13,12 @@
 .lw-float-right {
   float: right;
 }
+
+// Resize under specific viewport width
+@mixin lw-resize-at($breakpt, $width) {
+  @media screen and (max-width: $breakpt) {
+    & {
+      width: $width;
+    }
+  }
+}
