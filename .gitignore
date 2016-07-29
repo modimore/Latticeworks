@@ -1,3 +1,7 @@
-# Ignore files generated in SCSS compilation
-.sass-cache/
+# Sass generated files
+.sass-cache
 *.css.map
+
+# Jekyll generated files
+_site
+.jekyll-metadata

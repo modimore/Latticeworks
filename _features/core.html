@@ -1,0 +1,69 @@
+---
+---
+<header>
+  <h2>Core Layout Classes</h2>
+</header>
+
+<p>
+  There are three core layout definers in Latticeworks:
+  boxes, groups, and cells.
+</p>
+
+<section id="cells">
+  <h3>Cells</h3>
+  <p>A cell class provides a percentage-based width to an element, determined by the class.</p>
+  <p>
+    Cells line up next to each other up until they exceed the width of the containing element,
+    at which point the next cell will wrap around to the following line.
+  </p>
+  <p>
+    The class name format is <code>.lw-cell-<em>$n</em>-<em>$i</em></code>,
+    and that class would have a width property of <code><em>$i</em>/<em>$n</em> * 100%</code>.
+    Here's an example.
+  </p>
+
+  <div class="example">
+    <span class="lw-cell-12-12">12</span>
+    <span class="lw-cell-12-1">1</span>
+    <span class="lw-cell-12-2">2</span>
+    <span class="lw-cell-12-3">3</span>
+    <span class="lw-cell-12-3">3</span>
+    <span class="lw-cell-12-2">2</span>
+    <span class="lw-cell-12-1">1</span>
+  </div>
+
+  <div class="example">
+    <span class="lw-cell-12-11">11</span>
+    <span class="lw-cell-12-2">2</span>
+    <span class="lw-cell-12-10">10</span>
+  </div>
+</section>
+
+<section id="groups">
+  <h3>Groups</h3>
+
+  <p>A group class is by default 100% of the width of its parent element.</p>
+  <p>
+    It is intended to be used to separate groups (hence the name) of elements
+    from other elements in the flow of the page.
+  </p>
+
+  <div class="example">
+    <span class="lw-cell-12-6">Before Groups</span>
+    <div class="lw-group">
+      <span class="lw-cell-12-6">First Group</span>
+      <span class="lw-cell-12-6">First Group</span>
+      <span class="lw-cell-12-3">First Group</span>
+    </div>
+    <div class="lw-group">
+      <span class="lw-cell-12-9">Second Group</span>
+      <span class="lw-cell-12-3">Second Group</span>
+      <span class="lw-cell-12-6">Second Group</span>
+    </div>
+    <span class="lw-cell-12-6">After Groups</span>
+  </div>
+</section>
+
+<section id="boxes">
+  <h3>Boxes</h3>
+</section>

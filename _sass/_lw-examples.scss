@@ -1,0 +1,28 @@
+@import "_util";
+
+.example {
+  @extend %clearfix;
+  position: relative;
+  min-height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  [class*="lw-cell-"] {
+    background-color: green;
+    border: 5px solid darkgreen;
+
+    text-align: center;
+  }
+
+  .lw-box {
+    background-color: blue;
+    border: 5px solid darkblue;
+
+    margin: 10px auto;
+  }
+
+  .lw-group {
+    background-color: red;
+    border: 5px solid darkred;
+  }
+}

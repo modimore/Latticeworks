@@ -1,0 +1,42 @@
+---
+---
+@import "_core", "_forms", "_tables";
+
+$breakpt_1: 1200px;
+$breakpt_2: 750px;
+$breakpt_3: 600px;
+
+body {
+  margin: 0;
+}
+
+@include latticeworks-init;
+
+@include lw-cells(12);
+@include lw-cells-adjust-at(12, $breakpt_2, 6);
+@include lw-cells-adjust-at(12, $breakpt_3, 1);
+
+@include lw-group;
+
+@include lw-box {
+  width: 960px;
+  @include lw-resize-at($breakpt_1, 80%);
+  @include lw-resize-at($breakpt_2, 600px);
+  @include lw-resize-at($breakpt_3, 100%);
+}
+
+.lw-box-fluid {
+  @extend %lw-box;
+  width: auto;
+}
+
+@include lw-form;
+@include lw-fields(12);
+
+@include lw-tablefix(12);
+
+.clearfix {
+  @extend %clearfix;
+}
+
+@import "_lw-examples";
