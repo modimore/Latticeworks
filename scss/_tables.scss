@@ -3,11 +3,20 @@
   float: none;
 }
 
-@mixin lw-tablefix($n) {
+@mixin lw-table-disable-clearfix {
+  table {
+    &::before, &::after {
+      display: none !important;
+    }
+  }
+}
+
+@mixin lw-tablecells($n) {
   col, th, td {
-    @for $i from 1 through $n {
+    @for $i from 1 to $n {
       &.lw-cell-#{$n}-#{$i} {
         @extend %lw-cell-tablefix;
+        width: $i / $n * 100% !important;
       }
     }
   }
