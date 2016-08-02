@@ -1,28 +1,18 @@
-@import "_util";
-
-@mixin lw-form {
-  .lw-form {
-    @extend %clearfix;
-    @content;
+// General improvements for elements in forms
+.lw-form-field {
+  > label,
+  > input,
+  > textarea {
+    margin: 0px;
   }
-}
-
-// lw-field common properties
-%lw-field-common {
-  float: left;
 
   > input,
   > textarea {
     display: block;
     width: 100%;
   }
-}
 
-@mixin lw-fields($n) {
-  @for $i from 1 through $n {
-    .lw-field-#{$n}-#{$i} {
-      @extend %lw-field-common;
-      width: $i / $n * 100%;
-    }
+  > textarea {
+    max-width: 100%;
   }
 }

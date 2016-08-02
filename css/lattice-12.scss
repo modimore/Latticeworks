@@ -30,9 +30,6 @@ body {
   width: auto;
 }
 
-@include lw-form;
-@include lw-fields(12);
-
 @include lw-table-disable-clearfix;
 @include lw-tablecells(12);
 

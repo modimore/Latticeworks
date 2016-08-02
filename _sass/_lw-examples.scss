@@ -19,13 +19,6 @@ h3,
   margin-top: 10px;
   margin-bottom: 10px;
 
-  [class*="lw-cell-"] {
-    background-color: green;
-    border: 5px solid darkgreen;
-
-    text-align: center;
-  }
-
   table {
     &.ex-lw-cells {
       width: 100%;
@@ -40,19 +33,42 @@ h3,
     }
   }
 
-  .lw-box {
-    background-color: blue;
-    border: 5px solid darkblue;
+  .lw-group {
+    margin-top: 5px;
 
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+
+  .lw-box {
     margin: 10px auto;
     width: 0.8 * 960px;
     @include lw-resize-at(1200px, 80%);
     @include lw-resize-at(750px, 480px);
     @include lw-resize-at(600px, 80%);
   }
+}
+
+.colored-example {
+  [class*="lw-cell-"] {
+    background-color: green;
+    border: 5px solid darkgreen;
+
+    text-align: center;
+  }
 
   .lw-group {
     background-color: red;
     border: 5px solid darkred;
   }
+
+  .lw-box {
+    background-color: blue;
+    border: 5px solid darkblue;
+  }
+}
+
+label, input {
+  line-height: normal;
 }

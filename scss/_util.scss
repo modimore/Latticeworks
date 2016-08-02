@@ -10,8 +10,12 @@
   }
 }
 
+.lw-float-left {
+  float: left !important;
+}
+
 .lw-float-right {
-  float: right;
+  float: right !important;
 }
 
 // Resize under specific viewport width
