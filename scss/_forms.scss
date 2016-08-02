@@ -1,5 +1,13 @@
 @import "_util";
 
+@mixin lw-form {
+  .lw-form {
+    @extend %clearfix;
+    @content;
+  }
+}
+
+// lw-field common properties
 %lw-field-common {
   float: left;
 
@@ -10,16 +18,11 @@
   }
 }
 
-@mixin lw-form($n) {
-  .lw-form {
-    @extend %clearfix;
-  }
-
+@mixin lw-fields($n) {
   @for $i from 1 through $n {
     .lw-field-#{$n}-#{$i} {
-      width: $i / $n * 100%;
-
       @extend %lw-field-common;
+      width: $i / $n * 100%;
     }
   }
 }

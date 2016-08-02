@@ -29,6 +29,12 @@ sass:
 defaults:
   -
     scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
       path: "_features"
       type: "features"
     values:

@@ -1,7 +1,19 @@
-@import "_util";
+h3,
+.example {
+  &::before,
+  &::after {
+    display: table;
+    content: "";
+  }
+
+  &,
+  &::after {
+    clear: both;
+  }
+}
 
 .example {
-  @extend %clearfix;
+  width: 100%;
   position: relative;
   min-height: 1px;
   margin-top: 10px;
@@ -14,11 +26,29 @@
     text-align: center;
   }
 
+  table {
+    &.ex-lw-cells {
+      width: 100%;
+    }
+
+    &.ex-lw-cells,
+    &.lw-box,
+    &.lw-group {
+      th, td {
+        text-align: center;
+      }
+    }
+  }
+
   .lw-box {
     background-color: blue;
     border: 5px solid darkblue;
 
     margin: 10px auto;
+    width: 0.8 * 960px;
+    @include lw-resize-at(1200px, 80%);
+    @include lw-resize-at(750px, 480px);
+    @include lw-resize-at(600px, 80%);
   }
 
   .lw-group {

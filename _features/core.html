@@ -1,4 +1,5 @@
 ---
+title: Core Features
 ---
 <header>
   <h2>Core Layout Classes</h2>
@@ -21,6 +22,9 @@
     and that class would have a width property of <code><em>$i</em>/<em>$n</em> * 100%</code>.
     Here's an example.
   </p>
+
+  <h4>Example</h4>
+  <p>Green elements are cell elements.</p>
 
   <div class="example">
     <span class="lw-cell-12-12">12</span>
@@ -48,6 +52,9 @@
     from other elements in the flow of the page.
   </p>
 
+  <h4>Example</h4>
+  <p>Red elements are group elements.</p>
+
   <div class="example">
     <span class="lw-cell-12-6">Before Groups</span>
     <div class="lw-group">
@@ -66,4 +73,32 @@
 
 <section id="boxes">
   <h3>Boxes</h3>
+
+  <p>
+    A box is another type of self-contained section in the flow of the page,
+    but is not intended to always take up the whole width.
+  </p>
+  <p>
+    Boxes are suited for use as centered elements with an explicitly set width.
+    A common use for this would be to center all content on a page
+    by wrapping it in one of these boxes.
+  </p>
+
+  <h4>Example</h4>
+  <p>Blue elements are box elements.</p>
+
+  <div class="example">
+    <div class="lw-box">
+      <span class="lw-cell-12-3">3</span>
+      <span class="lw-cell-12-3">3</span>
+      <span class="lw-cell-12-6">6</span>
+    </div>
+    <div class="lw-box">
+      <div class="lw-group">
+        <span class="lw-cell-12-4">4</span>
+        <span class="lw-cell-12-4">4</span>
+      </div>
+      <span class="lw-cell-12-4">4</span>
+    </div>
+  </div>
 </section>

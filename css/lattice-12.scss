@@ -33,7 +33,8 @@ body {
 @include lw-form;
 @include lw-fields(12);
 
-@include lw-tablefix(12);
+@include lw-table-disable-clearfix;
+@include lw-tablecells(12);
 
 .clearfix {
   @extend %clearfix;
