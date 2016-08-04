@@ -3,7 +3,7 @@
   float: none;
 }
 
-@mixin lw-table-disable-clearfix {
+@mixin lw-table {
   table {
     &::before, &::after {
       display: none !important;
@@ -11,10 +11,10 @@
   }
 }
 
-@mixin lw-tablecells($n) {
+@mixin lw-tablecells($class-base, $n) {
   col, th, td {
     @for $i from 1 to $n {
-      &.lw-cell-#{$n}-#{$i} {
+      &.#{$class-base}-#{$n}-#{$i} {
         @extend %lw-cell-tablefix;
         width: $i / $n * 100% !important;
       }

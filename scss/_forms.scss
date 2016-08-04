@@ -1,5 +1,5 @@
 // General improvements for elements in forms
-.lw-form-field {
+@mixin lw-form-field {
   > label,
   > input,
   > textarea {

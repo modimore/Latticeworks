@@ -12,14 +12,16 @@ body {
 
 @include latticeworks-init;
 
-@include lw-cells(12);
-@include lw-cells-adjust-at(12, $breakpt_2, 6);
-@include lw-cells-adjust-at(12, $breakpt_3, 1);
+@include lw-cells('lw-cell', 12);
+@include lw-cells-adjust-at('lw-cell', 12, $breakpt_2, 6);
+@include lw-cells-adjust-at('lw-cell', 12, $breakpt_3, 1);
 
-@include lw-group;
+.lw-group {
+  @include lw-group;
+}
 
-@include lw-box {
-  width: 960px;
+.lw-box {
+  @include lw-box { width: 960px; }
   @include lw-resize-at($breakpt_1, 80%);
   @include lw-resize-at($breakpt_2, 600px);
   @include lw-resize-at($breakpt_3, 100%);
@@ -30,8 +32,12 @@ body {
   width: auto;
 }
 
-@include lw-table-disable-clearfix;
-@include lw-tablecells(12);
+@include lw-table;
+@include lw-tablecells('lw-cell', 12);
+
+.lw-form-field {
+  @include lw-form-field;
+}
 
 .clearfix {
   @extend %clearfix;

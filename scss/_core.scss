@@ -17,9 +17,9 @@
 }
 
 // Generates $n cell classes with increasing percentage widths
-@mixin lw-cells($n) {
+@mixin lw-cells($class-base, $n) {
   @for $i from 1 to $n+1 {
-    .lw-cell-#{$n}-#{$i} {
+    .#{$class-base}-#{$n}-#{$i} {
       @extend %lw-cell-common;
       width: $i / $n * 100%;
     }
@@ -27,11 +27,11 @@
 }
 
 // Cell padding utility
-@mixin lw-cells-pad($n, $padding) {
+@mixin lw-cells-pad($class-base, $n, $padding) {
   $padded-classes: ();
 
   @for $i from 1 through $n {
-    $padded-classes: append($padded-classes, unquote('lw-cell-#{$n}-#{$i}'), 'comma')
+    $padded-classes: append($padded-classes, unquote('.#{$class-base}-#{$n}-#{$i}'), 'comma')
   }
 
   #{$padded-classes} {
@@ -40,18 +40,18 @@
 }
 
 // Adjust cell widths under screen width breakpoint
-@mixin lw-cells-adjust-at($n, $screen-width-max, $cutoff) {
+@mixin lw-cells-adjust-at($class-base, $n, $screen-width-max, $cutoff) {
   @media screen and (max-width: $screen-width-max) {
     @if $cutoff != 1 {
       @for $i from 1 to $cutoff {
-        .lw-cell-#{$n}-#{$i} { width: $i / $cutoff * 100%; }
+        .#{$class-base}-#{$n}-#{$i} { width: $i / $cutoff * 100%; }
       }
     }
 
     $cutoff-classes: ();
 
     @for $i from $cutoff through $n {
-      $cutoff-classes: append($cutoff-classes, unquote('.lw-cell-#{$n}-#{$i}'), 'comma');
+      $cutoff-classes: append($cutoff-classes, unquote('.#{$class-base}-#{$n}-#{$i}'), 'comma');
     }
 
     #{$cutoff-classes} {
@@ -69,10 +69,8 @@
 }
 
 @mixin lw-group {
-  .lw-group {
-    @extend %lw-group;
-    @content;
-  }
+  @extend %lw-group;
+  @content;
 }
 
 // Latticework box styles
@@ -85,8 +83,6 @@
 }
 
 @mixin lw-box {
-  .lw-box {
-    @extend %lw-box;
-    @content;
-  }
+  @extend %lw-box;
+  @content;
 }

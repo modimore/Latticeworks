@@ -18,6 +18,7 @@ github_username:  modimore
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 # Sass settings
 sass:
