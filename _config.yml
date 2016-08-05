@@ -11,12 +11,13 @@ email: quinn.e.mortimer@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   The showcase and example site
   for the Latticeworks Sass-based layout generation system.
-baseurl: ""
 github_username:  modimore
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+gems: [ 'jekyll-github-metadata' ]
 
 # Page Grouping Information
 defaults:
