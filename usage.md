@@ -16,6 +16,7 @@ How that should play out depends on the types of elements you are trying to affe
 For out purposes, there are two categories of mixin to consider.
 
 ### Categories
+
 #### Simple
 A simple class is almost a ready-to-go style for an set of elements.
 The only thing it's missing is a name. Groups and Boxes fall under this category.
