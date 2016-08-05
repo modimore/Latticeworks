@@ -12,21 +12,13 @@ description: > # this means to ignore newlines until "baseurl:"
   The showcase and example site
   for the Latticeworks Sass-based layout generation system.
 baseurl: ""
-url: "https://latticeworks.github.io"
 github_username:  modimore
-# twitter_username: jekyllrb
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
-# Sass settings
-sass:
-  load_paths:
-    - _sass
-    - scss
-
-# Page group information
+# Page Grouping Information
 defaults:
   -
     scope:
