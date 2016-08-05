@@ -80,19 +80,20 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
-a {
-    color: $brand-color;
-    text-decoration: none;
+ a {
+   color: $text-color;
+   text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+   &:hover { text-decoration: none; }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
+   &:link { color: $brand-color; }
+   &:visited { color: darken($brand-color, 15%); }
+
+   &:link,
+   &:visited {
+     &:hover { text-decoration: underline; }
+   }
+ }
 
 /**
  * Blockquotes
@@ -140,7 +141,6 @@ pre {
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -152,7 +152,6 @@ pre {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;

@@ -1,7 +1,11 @@
-# Sass generated files
+# Generated files
+## Sass
 .sass-cache
 *.css.map
 
-# Jekyll generated files
+## Jekyll
 _site
 .jekyll-metadata
+
+## Bundler
+Gemfile.lock
