@@ -43,7 +43,7 @@ h3,
 
   .lw-box {
     margin: 10px auto;
-    width: 0.8 * 960px;
+    width: 0.8 * 740px;
     @include lw-resize-at(1200px, 80%);
     @include lw-resize-at(750px, 480px);
     @include lw-resize-at(600px, 80%);

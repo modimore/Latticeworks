@@ -3,7 +3,7 @@
   float: none;
 }
 
-@mixin lw-table {
+@mixin lw-tablefix {
   table {
     &::before, &::after {
       display: none !important;
@@ -11,7 +11,7 @@
   }
 }
 
-@mixin lw-tablecells($class-base, $n) {
+@mixin lw-tablecells($n, $class-base: 'lw-cell') {
   col, th, td {
     @for $i from 1 to $n {
       &.#{$class-base}-#{$n}-#{$i} {

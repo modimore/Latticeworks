@@ -2,16 +2,16 @@
 @import 'latticeworks/tables';
 
 @include latticeworks-init;
-@include lw-cells('lw-cell', 12);
-@include lw-cells-adjust-at('lw-cell', 12, $on-palm, 6);
-@include lw-cells-adjust-at('lw-cell', 12, 400px, 1);
+@include lw-cells(12);
+@include lw-cells-adjust-at(12, $on-palm, 6);
+@include lw-cells-adjust-at(12, 400px, 1);
 
 .lw-group {
   @include lw-group;
 }
 
-@include lw-table;
-@include lw-tablecells('lw-cell', 12);
+@include lw-tablefix;
+@include lw-tablecells(12);
 
 .main-section {
   border-top: 1px solid $grey-color-light;

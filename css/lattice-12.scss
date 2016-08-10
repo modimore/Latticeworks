@@ -12,9 +12,9 @@ body {
 
 @include latticeworks-init;
 
-@include lw-cells('lw-cell', 12);
-@include lw-cells-adjust-at('lw-cell', 12, $breakpt_2, 6);
-@include lw-cells-adjust-at('lw-cell', 12, $breakpt_3, 1);
+@include lw-cells(12);
+@include lw-cells-adjust-at(12, $breakpt_2, 6);
+@include lw-cells-adjust-at(12, $breakpt_3, 1);
 
 .lw-group {
   @include lw-group;
@@ -32,8 +32,8 @@ body {
   width: auto;
 }
 
-@include lw-table;
-@include lw-tablecells('lw-cell', 12);
+@include lw-tablefix;
+@include lw-tablecells(12);
 
 .lw-form-field {
   @include lw-form-field;

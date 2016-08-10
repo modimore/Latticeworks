@@ -17,7 +17,7 @@
 }
 
 // Generates $n cell classes with increasing percentage widths
-@mixin lw-cells($class-base, $n) {
+@mixin lw-cells($n, $class-base: 'lw-cell') {
   @for $i from 1 to $n+1 {
     .#{$class-base}-#{$n}-#{$i} {
       @extend %lw-cell-common;
@@ -27,7 +27,7 @@
 }
 
 // Cell padding utility
-@mixin lw-cells-pad($class-base, $n, $padding) {
+@mixin lw-cells-pad($n, $padding, $class-base: 'lw-cell') {
   $padded-classes: ();
 
   @for $i from 1 through $n {
@@ -40,7 +40,7 @@
 }
 
 // Adjust cell widths under screen width breakpoint
-@mixin lw-cells-adjust-at($class-base, $n, $screen-width-max, $cutoff) {
+@mixin lw-cells-adjust-at($n, $screen-width-max, $cutoff, $class-base: 'lw-cell') {
   @media screen and (max-width: $screen-width-max) {
     @if $cutoff != 1 {
       @for $i from 1 to $cutoff {
