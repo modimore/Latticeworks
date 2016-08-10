@@ -34,10 +34,13 @@ body {
 @include lw-cells-adjust-at(12, 750px, 6);
 @include lw-cells-adjust-at(12, 630px, 1);
 
-@include lw-group;
+.lw-group {
+  @include lw-group;
+}
 
-@include lw-box {
-  width: 1200px;
+
+.lw-box {
+  @include lw-box { width: 1200px; }
   @include lw-resize-at(1250px, 960px);
   @include lw-resize-at(1000px, 720px);
   @include lw-resize-at(750px, 600px);
@@ -49,8 +52,13 @@ body {
   width: auto;
 }
 
-@include lw-table-disable-clearfix;
+table {
+  width: 100%;
+}
+
+@include lw-tablefix;
 @include lw-tablecells(12);
+
 
 .clearfix {
   @extend %clearfix;

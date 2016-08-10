@@ -50,17 +50,6 @@ body {
   margin-right: auto;
   min-height: 1px; }
 
-.lw-form-field > label,
-.lw-form-field > input,
-.lw-form-field > textarea {
-  margin: 0px; }
-.lw-form-field > input,
-.lw-form-field > textarea {
-  display: block;
-  width: 100%; }
-.lw-form-field > textarea {
-  max-width: 100%; }
-
 col.lw-cell-12-1, th.lw-cell-12-1, td.lw-cell-12-1, col.lw-cell-12-2, th.lw-cell-12-2, td.lw-cell-12-2, col.lw-cell-12-3, th.lw-cell-12-3, td.lw-cell-12-3, col.lw-cell-12-4, th.lw-cell-12-4, td.lw-cell-12-4, col.lw-cell-12-5, th.lw-cell-12-5, td.lw-cell-12-5, col.lw-cell-12-6, th.lw-cell-12-6, td.lw-cell-12-6, col.lw-cell-12-7, th.lw-cell-12-7, td.lw-cell-12-7, col.lw-cell-12-8, th.lw-cell-12-8, td.lw-cell-12-8, col.lw-cell-12-9, th.lw-cell-12-9, td.lw-cell-12-9, col.lw-cell-12-10, th.lw-cell-12-10, td.lw-cell-12-10, col.lw-cell-12-11, th.lw-cell-12-11, td.lw-cell-12-11 {
   position: static;
   float: none; }
@@ -145,6 +134,9 @@ body {
 
 .lw-box-fluid {
   width: auto; }
+
+table {
+  width: 100%; }
 
 table::before, table::after {
   display: none !important; }
